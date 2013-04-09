@@ -14,8 +14,9 @@ Jobs::Application.routes.draw do
 
   devise_for :users, :controllers => {:registrations => "users"}
 
-  post "user_registration" => "users#create", :as => "user_registration"
-
+  devise_scope :user do
+    post "user_registration" => "users#create", :as => "user_registration"
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
