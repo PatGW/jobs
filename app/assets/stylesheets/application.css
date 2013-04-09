@@ -12,22 +12,42 @@
  *= require_tree .
  */
 
+body {background-color: #CDCFBC;
+	width: 90%;
+	margin: 0px auto;
+}
 
-/*@import url("normalize.css");*/
-
-body { background-color: #A7CCCC; }
+#index {
+	width: 90%;
+	margin: 0px auto;
+}
 
 a { text-decoration: none }
 
 header {
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
-  background-color: #A7CCCC; 
+	width: 90%;
+	height: 50%;
+	margin: 0px auto;
+ /* border-bottom: 1px solid #ddd;*/
+ /* padding: 20px 0;*/
+  background-image: url(brainlarge.jpg);
+  background-repeat: no-repeat; 
+  
 }
 
-.slogan { width: 30px ;
-  margin-left: auto ;
-  margin-right: auto ;}
+#main_container{
+	
+	padding: 150px 0px 150px 0px;
+	background-repeat: no-repeat; 
+	width: 90%;
+	/*border: 10px red solid;*/
+}
+
+#slogan { width: 30px ;
+	margin-left: 20px;
+font-family: 'Noto Sans', sans-serif;
+font-size: 3em;
+}
 
 #user_nav { margin-left: 20px; }
 
@@ -38,7 +58,9 @@ form div {
   overflow: hidden;
 }
 
-h2 /*{ font-family: 'Cinzel Decorative', cursive; }*/
+span {
+	color: red;
+}
 
 th {padding: 8px;}
 
@@ -47,11 +69,16 @@ td {padding: 8px;}
 h1 { 
   margin-left: 10px;}
 
-#description {font-size: 14px;
+#description {font-size: 1em;
 color: black;
-font-family: Arial, Helvetica, sans-serif;
-width: 665px;
-margin-left: auto ;
-margin-right: auto ;
+
+width: 185px;
+margin-left: 20px ;
+
+font-family: 'Noto Sans', sans-serif;
 }
+
+
+
+
 

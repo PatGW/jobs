@@ -15,9 +15,9 @@ class UsersController < Devise::RegistrationsController
 
   def after_sign_in_path(resource)
     if resource.role_type == "employer" 
-      role = Employer.create
+      role = Employer.create!
     elsif resource.role_type == "applicant"
-      role = Applicant.create
+      role = Applicant.create!
     else
       redirect_to(new_user_registration_path) and return
     end 

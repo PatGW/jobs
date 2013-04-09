@@ -3,7 +3,7 @@ class JobsController < ApplicationController
   #before create run authenticate
   # GET /jobs
   # GET /jobs.json
-  before_filter :check_privileges!, :only => [:create] 
+  before_filter :check_privileges!, :only => [:new, :create, :edit, :update, :destroy] 
 
   def create
     @job = Job.new(params[:job])
@@ -17,6 +17,10 @@ class JobsController < ApplicationController
         format.json { render json: @job.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def check_privileges!
+    redirect_to root_url, error: 'You cant create a job here buddy' unless current_user.role_type == "employer"
   end
 
   def index
@@ -87,9 +91,6 @@ class JobsController < ApplicationController
     end
   end
 
-  def check_privileges!
-    redirect_to root_url, error: 'You cant create a job here buddy' unless current_user.role_type == "employer"
-
-  end
+  
 
 end

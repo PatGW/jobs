@@ -1,5 +1,6 @@
-<h1>All Jobs</h1>
 
+<div id="index">
+<h1>All Jobs</h1>
 <table>
   <tr>
     <th>Title</th>
@@ -15,21 +16,21 @@
 
 <% @jobs.each do |job| %>
   <tr>
-    <td><%= job.title %></td>
+    <td><%= link_to(job.title, job_path(job)) %></td>
     <td><%= job.location %></td>
     <td><%= job.position_type %></td>
     <td><%= job.category %></td>
     <td><%= job.description %></td>
     <td><%= job.how_to_apply %></td>
-    <td><%= link_to 'Show', job %></td>
-    <td><%= link_to 'Edit', edit_job_path(job) %></td>
-    <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <!-- <td><%= link_to 'Show', job %></td> -->
+  <!--   <td><%= link_to 'Edit', edit_job_path(job) %></td>
+    <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
   </tr>
 <% end %>
 </table>
 
 <br />
-
+</div>
 
 
 <% if current_user %>
@@ -37,5 +38,5 @@
 
         <%= link_to "New Job", new_job_path %>
     <% else %>
-        <%= link_to "Join us to advertise a vacancy.", new_user_registration_path %>
+        <%= link_to "Advertise A Vacancy.", new_user_registration_path, :class => 'btn btn-large btn-success' %>
     <% end %>
