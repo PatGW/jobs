@@ -8,6 +8,8 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+
+ *= require bootstrap
  *= require_self
  *= require_tree .
  */
@@ -25,9 +27,9 @@ body {background-color: #CDCFBC;
 a { text-decoration: none }
 
 header {
-	width: 90%;
-	height: 50%;
-	margin: 0px auto;
+	/*width: 90%;*/
+	height: 200px;
+	/*margin: 0px auto;*/
  /* border-bottom: 1px solid #ddd;*/
  /* padding: 20px 0;*/
   background-image: url(brainlarge.jpg);
@@ -35,21 +37,26 @@ header {
   
 }
 
-#main_container{
-	
-	padding: 150px 0px 150px 0px;
-	background-repeat: no-repeat; 
-	width: 90%;
-	/*border: 10px red solid;*/
-}
 
-#slogan { width: 30px ;
+#slogan { width: 30px;
 	margin-left: 20px;
 font-family: 'Noto Sans', sans-serif;
 font-size: 3em;
 }
 
-#user_nav { margin-left: 20px; }
+#user_nav { 
+	height: 20px;
+	margin-left: 20px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+ }
+
+header #reach {
+	width: 400px;
+	margin: 20px;
+	font-size: 1em;
+	color: black;
+}
 
 form {  overflow: hidden; margin-bottom: 30px;}
 
@@ -69,14 +76,15 @@ td {padding: 8px;}
 h1 { 
   margin-left: 10px;}
 
-#description {font-size: 1em;
+#reach {font-size: 1em;
 color: black;
+width: 150px;}
 
-width: 185px;
+/*width: {185px;
 margin-left: 20px ;
 
 font-family: 'Noto Sans', sans-serif;
-}
+}*/
 
 
 
