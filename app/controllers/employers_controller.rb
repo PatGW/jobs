@@ -25,7 +25,6 @@ class EmployersController < ApplicationController
   # GET /employers/new.json
   def new
     User.new(params[:user])
-    Empl
     @employer = Employer.new
 
     respond_to do |format|
@@ -43,7 +42,7 @@ class EmployersController < ApplicationController
   # POST /employers.json
   def create
     @employer = Employer.new(params[:employer])
-
+debugger
     respond_to do |format|
       if @employer.save
         format.html { redirect_to @employer, notice: 'Employer was successfully created.' }

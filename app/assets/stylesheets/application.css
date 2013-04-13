@@ -14,10 +14,10 @@
  *= require_tree .
  */
 
-body {background-color: #CDCFBC;
+/*body {background-color: #CDCFBC;
 	width: 90%;
 	margin: 0px auto;
-}
+}*/
 
 #index {
 	width: 90%;
@@ -79,6 +79,10 @@ h1 {
 #reach {font-size: 1em;
 color: black;
 width: 150px;}
+
+#index_options {
+	margin-left: 20px;
+}
 
 /*width: {185px;
 margin-left: 20px ;

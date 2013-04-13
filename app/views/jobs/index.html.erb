@@ -32,11 +32,12 @@
 <br />
 </div>
 
+<div id="index_options"
 
-<% if current_user %>
-        Logged in as <%= current_user.email %>      
+<% if current_user %>     
 
-        <%= link_to "New Job", new_job_path %>
+        <%= link_to "New Job", new_job_path, :class => 'btn btn-info' %>
     <% else %>
         <%= link_to "Advertise A Vacancy.", new_user_registration_path, :class => 'btn btn-large btn-success' %>
     <% end %>
+</div>
