@@ -14,7 +14,6 @@ class UsersController < Devise::RegistrationsController
   private
 
   def after_sign_in_path(resource)
-    debugger
      @user = User.new(params[:user])
     if params[:role_type] == "coach"
       role = Employer.create

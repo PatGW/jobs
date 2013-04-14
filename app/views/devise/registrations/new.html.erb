@@ -1,3 +1,4 @@
+<div class="container">
 <h2>Sign up</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
@@ -13,16 +14,17 @@
   <%= f.password_field :password_confirmation %></div>
 
   <p>
-		<%= radio_button_tag :role, "employer", :checked => false %><br />
-		<%= label :role, 'Employer' %>
+		<%= radio_button_tag :role_type, "employer", :checked => false %><br />
+		<%= label :role_type, 'Employer' %>
 	</p>
 	<p>
-		<%= radio_button_tag :role, "applicant", :checked => true %><br />
-		<%= label :role, 'Applicant' %>
+		<%= radio_button_tag :role_type, "applicant", :checked => true %><br />
+		<%= label :role_type, 'Applicant' %>
 	</p>
 
-  <div><%= f.submit "Sign up" %></div>
+  <div><%= f.submit "Sign up", :class => 'btn btn-large btn-success' %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
 

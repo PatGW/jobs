@@ -32,7 +32,8 @@ header {
 	/*margin: 0px auto;*/
  /* border-bottom: 1px solid #ddd;*/
  /* padding: 20px 0;*/
-  background-image: url(brainlarge.jpg);
+  /*background-image: url(brainlarge.jpg);*/
+  background-color: #ABB3A6;
   background-repeat: no-repeat; 
   
 }
@@ -90,6 +91,9 @@ margin-left: 20px ;
 font-family: 'Noto Sans', sans-serif;
 }*/
 
+#resonate_footer {
+		padding-left: 320px;
+}
 
 
 
